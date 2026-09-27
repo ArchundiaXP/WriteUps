@@ -30,7 +30,7 @@ PORT   STATE SERVICE VERSION
 
 Al explorar por medio del navegador encontramos que existe un servidor web apache 
 
-![[Pasted image 20260924123934.png|406]]
+![Imagen Reconocimiento](IMG/Pasted%20image%2020260924123934.png)
 
 2. Sabiendo esto busco encontrar directorios ocultos aplicando Fuzzing y usando la herramienta gobuster
 
@@ -54,7 +54,7 @@ secret.php           (Status: 200) [Size: 927]
 
 encontramos una pagina web que nos da como pista un posible nombre de usuario que podemos usar para conectarnos por ssh
 
-![[Pasted image 20260924124807.png|396]]
+![Pista usuario](IMG/Pasted%20image%2020260924124807.png)
 
 # Explotación 
 
@@ -88,7 +88,7 @@ ssh mario@172.17.0.2
 
 4. tenemos acceso por lo que procedemos a hacer un reconocimiento de rutina
 
-![[Pasted image 20260924134742.png|685]]
+![Reconocimiento rutina](IMG/Pasted%20image%2020260924134742.png)
 
 encontramos que podemos ejecutar vim como sudo
 # Escalada de privilegios 
@@ -105,12 +105,11 @@ sudo /usr/bin/vim
 !/bin/bash
 ```
 
-![[Pasted image 20260924161555.png|302]]
+![Escalada root exitosa](IMG/Pasted%20image%2020260924161622.png)
 
 Es así que logramos escalar a un usuario root 
 
-![[Pasted image 20260924161622.png]]
-
+![Escalada root exitosa](IMG/Pasted%20image%2020260924161622.png)
 
 # Soluciones
 Como conclusión se hacen las siguientes recomendaciones  
